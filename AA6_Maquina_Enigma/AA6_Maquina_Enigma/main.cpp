@@ -33,6 +33,7 @@ int main() {
 	}
 	std::cout <<"[INFO] Quitar puntos, comas y simbolos especiales." << mensajeParaCifrar;
 	//2. Quitar acentos
+	
 	//3. Todo en mayúsculas
 	//4. Separar en grupos de 5
 }
