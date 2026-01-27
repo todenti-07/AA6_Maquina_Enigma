@@ -46,7 +46,7 @@ int main() {
 			}
 		}
 	}
-	std::cout << "[INFO] Quitar acentos: " << mensajeParaCifrar; 
+	std::cout << "\n[INFO] Quitar acentos: " << mensajeParaCifrar; 
 	
 	//3. Todo en mayúsculas
 	//4. Separar en grupos de 5
