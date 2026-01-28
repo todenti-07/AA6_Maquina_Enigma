@@ -34,19 +34,19 @@ int main() {
 	std::cout <<"[INFO] Quitar puntos, comas y simbolos especiales." << mensajeParaCifrar;
 
 	//2. Quitar acentos
-	std::string acentos = "áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛ";
-	std::string sinAcentos = "aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUU";
+	std::string acentos = "áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛ"; 
 
-	for (size_t i = 0; i < mensajeParaCifrar.size(); i++) //Por cada letra..
-	{
-		for (size_t j = 0; j < acentos.size(); j++) //...y por cada letra con acento
-		{
-			if (mensajeParaCifrar[i] == acentos[j]) {
-				mensajeParaCifrar[i] == sinAcentos[j]; //la cambiamos la misma sin acento
+	for (size_t i = 0; i < mensajeParaCifrar.size(); i++) {
+
+		for (size_t j = 0; j < acentos.size(); j++) {
+
+			if (mensajeParaCifrar[i] == acentos[j]) { // Si la lletra té accent...
+				mensajeParaCifrar.erase(i, 1); 
+				i--; 
 			}
 		}
 	}
-	std::cout << "\n[INFO] Quitar acentos: " << mensajeParaCifrar; 
+	std::cout << "\n[INFO] Quitar acentos: " << mensajeParaCifrar;
 	
 	//3. Todo en mayúsculas
 	//4. Separar en grupos de 5
