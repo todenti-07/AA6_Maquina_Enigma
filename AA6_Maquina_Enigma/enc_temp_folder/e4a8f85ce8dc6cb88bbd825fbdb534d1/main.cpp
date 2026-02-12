@@ -80,7 +80,7 @@ int main() {
         agrupado.push_back(mensajeParaCifrar[i]); 
 
         if ((i + 1) % 5 == 0 && i != mensajeParaCifrar.size() - 1)
-            agrupado.push_back(L' '); 
+            agrupado.push_back(L''); 
     }
 
 
