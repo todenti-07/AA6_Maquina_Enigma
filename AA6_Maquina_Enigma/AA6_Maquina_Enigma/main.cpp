@@ -17,23 +17,7 @@ wchar_t notchR2 = L'B';
 std::wstring r3 = L"NASBNDEJKHESDBEVDFJ";
 wchar_t notchR3 = L'C';
 
-// Quitar acentos para std::wstring
-std::wstring quitarAcentos(const std::wstring& s) {
-    const std::wstring acentos = L"áàäâéèëêíìïîóòöôúùüûÁÀÄÂÉÈËÊÍÌÏÎÓÒÖÔÚÙÜÛñÑçÇ";
-    const std::wstring sinAcentos = L"aaaaeeeeiiiioooouuuuAAAAEEEEIIIIOOOOUUUUnNcC";
 
-    std::wstring r;
-    r.reserve(s.size());
-
-    for (wchar_t ch : s) {
-        std::size_t pos = acentos.find(ch);
-        if (pos != std::wstring::npos)
-            r.push_back(sinAcentos[pos]);
-        else
-            r.push_back(ch);
-    }
-    return r;
-}
 
 int main() {
 
